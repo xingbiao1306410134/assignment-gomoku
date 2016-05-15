@@ -5,7 +5,7 @@ var His = function(i, j, c)
 	this.color = c;
 }
 
-var manager ={
+var danren_manager ={
 	history:new Array(),
 	color :"white",
 	info:document.getElementById("info"),
@@ -34,5 +34,53 @@ var manager ={
 		else{
 			this.color = "white";
 		}
+	}
+};
+
+
+var renji_manager ={
+	history:new Array(),
+	color :"white",
+	info:document.getElementById("info"),
+	setColor:function(x,y)
+	{
+		if(myContain.setColor(x,y,this.color))
+		{
+			if(myContain.isWin(x,y))
+			{
+				alert(this.color + " is winer!");
+				return true;
+			}
+			this.nextColor();
+		}
+
+
+		//电脑
+		var coord = myContain.getNext(this.color);
+		myContain.setColor(coord.x, coord.y,this.color);
+		if(myContain.isWin(coord.x,coord.y))
+		{
+			alert(this.color + " is winer!");
+			return true;
+		}
+		this.nextColor();
+	},
+	nextColor:function()
+	{
+		if(this.color == "white")
+		{
+			this.color = "black";
+		}
+		else{
+			this.color = "white";
+		}
+	},
+	getNextColor:function(c)
+	{
+		if(c == "white")
+		{
+			return "black";
+		}
+		else return "white";
 	}
 };

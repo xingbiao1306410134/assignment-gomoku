@@ -1,0 +1,16 @@
+.ele{
+	display: block;
+	width: 31px;
+	height: 31px;
+}
+.qipan{
+	padding: 4px;
+	background-image: url("../images/qipan.jpg");
+	width:520px;
+	height: 520px;
+	margin:0 auto;
+}
+.qizi{
+	width:30px;
+	height: 30px;
+}

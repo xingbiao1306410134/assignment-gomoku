@@ -7,15 +7,16 @@ var His = function(i, j, c)
 
 var manager ={
 	history:new Array(),
-	color :"red",
+	color :"white",
+	info:document.getElementById("info"),
 	setColor:function(x,y)
 	{
 		//alert("" + x + y);
 		if(myContain.setColor(x,y,this.color))
 		{
 			//alert("ok");
-			var ele = document.getElementById("ele_" + x + "_" + y);
-			ele.style.backgroundColor = "" + this.color;
+			//var ele = document.getElementById("ele_" + x + "_" + y);
+			//ele.style.backgroundColor = "" + this.color;
 			if(myContain.isWin(x,y))
 			{
 				alert(this.color + " is winer!");
@@ -26,12 +27,12 @@ var manager ={
 	},
 	nextColor:function()
 	{
-		if(this.color == "red")
+		if(this.color == "white")
 		{
-			this.color = "blue";
+			this.color = "black";
 		}
 		else{
-			this.color = "red";
+			this.color = "white";
 		}
 	}
 };

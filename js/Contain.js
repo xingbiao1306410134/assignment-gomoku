@@ -193,9 +193,12 @@ Contain.prototype = {
 		}
 		return false;
 	},
-	score:function(x,y)
+	score:function(x,y,color)
 	{
-		var color = myContain.contain[x][y].color;
+		if(myContain.contain[x][y].color != "")
+		{
+			return 0;
+		}
 		var i = 0;
 		var s = 0;
 		var t = 1;

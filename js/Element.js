@@ -16,7 +16,7 @@ Element.prototype = {
 	toString:function()
 	{
 		var str = "<a href = # id = ele_" + this.x + "_" + this.y + " class = ele >";
-		str += "" + this.x + this.y;
+		str += "";
 		str += "</a>";
 		return str;
 	},
@@ -26,9 +26,12 @@ Element.prototype = {
 	},
 	setColor:function(c)
 	{
+		var ele = document.getElementById("ele_" + this.x + "_" + this.y);
 		if(this.isEmpty())
 		{
+			var str = "<img src = images/" + c + ".png class = qizi />";
 			this.color = c;
+			ele.innerHTML = str;
 			return true;
 		}
 		else return false;

@@ -5,6 +5,7 @@ var init = function()
 	var kaishi = document.getElementById("button_kaishi");
 	var renji = document.getElementById("button_renji");
 	var huiqi = document.getElementById("button_huiqi");
+	var ck = document.getElementById("button_ck");
 	var qipan = document.getElementById("qipan");
 
 

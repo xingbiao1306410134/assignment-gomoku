@@ -25,6 +25,7 @@ var danren_manager = {
 			}
 			this.nextColor();
 		}
+		info.innerText = "当前玩家：" + this.color;
 	},
 	nextColor:function()
 	{
@@ -76,6 +77,7 @@ var renji_manager ={
 			return true;
 		}
 		this.nextColor();
+		info.innerText = "当前玩家：" + this.color;
 	},
 	nextColor:function()
 	{

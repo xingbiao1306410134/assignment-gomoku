@@ -13,6 +13,7 @@ var Element = function(i, j)
 };
 
 Element.prototype = {
+	constructor:Element,
 	toString:function()
 	{
 		var str = "<a href = # id = ele_" + this.x + "_" + this.y + " class = ele >";
@@ -45,6 +46,6 @@ Element.prototype = {
 	},
 	restore:function()
 	{
-		return "";
+		this.color = "";
 	}
 };

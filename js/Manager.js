@@ -1,11 +1,11 @@
 var His = function(i, j, c)
 {
 	this.x = i;
-	this.y = y;
+	this.y = j;
 	this.color = c;
 }
 
-var danren_manager ={
+var danren_manager = {
 	history:new Array(),
 	color :"white",
 	info:document.getElementById("info"),
@@ -17,6 +17,7 @@ var danren_manager ={
 			//alert("ok");
 			//var ele = document.getElementById("ele_" + x + "_" + y);
 			//ele.style.backgroundColor = "" + this.color;
+			this.history.push(new His(x,y,this.color));
 			if(myContain.isWin(x,y))
 			{
 				alert(this.color + " is winer!");
@@ -34,6 +35,15 @@ var danren_manager ={
 		else{
 			this.color = "white";
 		}
+	},
+	huiqi:function()
+	{
+		var h = this.history.pop();
+		if(h){
+			myContain.contain[h.x][h.y].restore();
+			document.getElementById("ele_" + h.x + "_" + h.y).innerText = "";
+			this.nextColor();
+		}
 	}
 };
 
@@ -46,6 +56,7 @@ var renji_manager ={
 	{
 		if(myContain.setColor(x,y,this.color))
 		{
+			this.history.push(new His(x,y,this.color));
 			if(myContain.isWin(x,y))
 			{
 				alert(this.color + " is winer!");
@@ -58,6 +69,7 @@ var renji_manager ={
 		//电脑
 		var coord = myContain.getNext(this.color);
 		myContain.setColor(coord.x, coord.y,this.color);
+		this.history.push(new His(coord.x,coord.y,this.color));
 		if(myContain.isWin(coord.x,coord.y))
 		{
 			alert(this.color + " is winer!");
@@ -82,5 +94,18 @@ var renji_manager ={
 			return "black";
 		}
 		else return "white";
+	},
+	huiqi:function()
+	{
+		var h = this.history.pop();
+		if(h){
+			myContain.contain[h.x][h.y].restore();
+			document.getElementById("ele_" + h.x + "_" + h.y).innerText = "";
+			h = this.history.pop();
+			if(h){
+				myContain.contain[h.x][h.y].restore();
+				document.getElementById("ele_" + h.x + "_" + h.y).innerText = "";
+			}
+		}
 	}
 };

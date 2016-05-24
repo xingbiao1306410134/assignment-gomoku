@@ -4,11 +4,14 @@ var init = function()
 {
 	var kaishi = document.getElementById("button_kaishi");
 	var renji = document.getElementById("button_renji");
-	var jieshu = document.getElementById("button_jieshu");
 	var huiqi = document.getElementById("button_huiqi");
 	var qipan = document.getElementById("qipan");
 
 
+	huiqi.onclick = function()
+	{
+		manager.huiqi();
+	}
 	kaishi.onclick = function() //单人游戏
 	{
 		manager = danren_manager;

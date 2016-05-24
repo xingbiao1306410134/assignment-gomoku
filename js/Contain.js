@@ -12,6 +12,7 @@ var Contain = function()
 };
 
 Contain.prototype = {
+	constructor:Contain,
 	toString:function()
 	{
 		var str = "";
@@ -84,7 +85,7 @@ Contain.prototype = {
 	},
 	restore:function()
 	{
-		return "";
+		init();
 	},
 	setColor:function(x, y, color)
 	{

@@ -20,7 +20,9 @@ var danren_manager = {
 			this.history.push(new His(x,y,this.color));
 			if(myContain.isWin(x,y))
 			{
-				alert(this.color + " is winer!");
+				//alert(this.color + " is winer!");
+				info.innerText = "" + this.color + " is winer!";
+				this.messWin(this.color);
 				return true;
 			}
 			this.nextColor();
@@ -45,6 +47,12 @@ var danren_manager = {
 			document.getElementById("ele_" + h.x + "_" + h.y).innerText = "";
 			this.nextColor();
 		}
+	},
+	messWin(color)
+	{
+		var win = document.getElementById("win");
+		document.getElementById("winMess").innerText = "" + color + " is Winner!";
+		win.style.display = "block";
 	}
 };
 
@@ -60,7 +68,8 @@ var renji_manager ={
 			this.history.push(new His(x,y,this.color));
 			if(myContain.isWin(x,y))
 			{
-				alert(this.color + " is winer!");
+				info.innerText = "" + this.color + " is winer!";
+				this.messWin(this.color);
 				return true;
 			}
 			this.nextColor();
@@ -73,7 +82,8 @@ var renji_manager ={
 		this.history.push(new His(coord.x,coord.y,this.color));
 		if(myContain.isWin(coord.x,coord.y))
 		{
-			alert(this.color + " is winer!");
+			info.innerText = "" + this.color + " is winer!";
+			this.messWin(this.color);
 			return true;
 		}
 		this.nextColor();
@@ -109,5 +119,11 @@ var renji_manager ={
 				document.getElementById("ele_" + h.x + "_" + h.y).innerText = "";
 			}
 		}
+	},
+	messWin(color)
+	{
+		var win = document.getElementById("win");
+		document.getElementById("winMess").innerText = "" + color + " is Winner!";
+		win.style.display = "block";
 	}
 };

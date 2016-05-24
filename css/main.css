@@ -1,3 +1,6 @@
+body{
+	background-color: rgb(159, 125, 98);
+}
 .ele{
 	display: block;
 	width: 31px;
@@ -14,3 +17,67 @@
 	width:30px;
 	height: 30px;
 }
+.button{
+	float:left;
+	padding: 5px;
+	display: block;
+	background-color: #422F2F;
+	font-size: 30px;
+	width:200px;
+	height: 700px;
+	margin:0 auto;
+	text-align: center;
+}
+.button_kaishi,.button_renji,.button_huiqi,.button_ck{
+	text-decoration:none;
+	background-color: #422F2F;
+	font-weight: bold;
+	display: block;
+	color: #cccccc;
+}
+.button_kaishi:hover{background-color:#CC3300;}
+.button_renji:hover{background-color:#CC3300;}
+.button_huiqi:hover{background-color:#CC3300;}
+.button_ck:hover{background-color:#CC3300;}
+.message
+{
+	width:300px;
+	margin:0 auto;
+	height: 50px;
+	font-weight: bold;
+	color: rgb(6, 2, 2);
+	font-size: 30px;
+}
+.envi{
+	float:right;
+	padding: 5px;
+	display: block;
+	background-color: #422F2F;
+	font-size: 30px;
+	width:200px;
+	height: 700px;
+	margin:0 auto;
+	text-align: center;
+	color: #cccccc;
+	font-weight: bold;
+}
+.win{
+	width:100%;
+	height: 100px;
+	background-color: #74D66D;
+	text-align: center;
+	position:absolute;
+	top:30%;
+	color: #FF0000;
+	font-size: 30px;
+	display: none;
+}
+
+.button_win{
+	text-decoration:none;
+	font-weight: bold;
+	display: block;
+	color: #FF0000;
+	font-size: 30px;
+}
+.button_win:hover{background-color:#000000;}

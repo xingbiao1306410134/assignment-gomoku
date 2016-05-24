@@ -81,3 +81,8 @@ body{
 	font-size: 30px;
 }
 .button_win:hover{background-color:#000000;}
+
+.help{
+	width: 600px;
+	margin: 0 auto;
+}
